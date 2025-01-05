@@ -1,7 +1,8 @@
-export const BUDDY_PROJECT_CONSTANTS = {
+const BUDDY_PROJECT_CONSTANTS = {
     ERRORS: {
         BUDDY_NOT_FOUND: 'Buddy not found',
         ALL_FIELDS_REQUIRED: 'All fields are required',
+        GENERIC_ERROR: 'Something went wrong!'
 
     },
     SUCCESS_MESSAGE: {
@@ -10,3 +11,5 @@ export const BUDDY_PROJECT_CONSTANTS = {
         DELETED_BUDDY:  'Buddy deleted successfully',
     }
 }
+
+module.exports = {BUDDY_PROJECT_CONSTANTS}
