@@ -6,6 +6,7 @@ const express = require('express');
 const winston = require('winston');
 const bodyParser = require('body-parser');
 const cors = require('cors');  
+const { BUDDY_PROJECT_CONSTANTS } = require('./constants/app-constants');
 
 const PORT = process.env.PORT || 3003;
 
@@ -28,7 +29,7 @@ app.use(cors());
 // Ensure `cdw_ace23_buddies.json` exists
 if (!fs.existsSync(BUDDIES_FILE)) {
     fs.writeFileSync(BUDDIES_FILE, JSON.stringify([]));
-    logger.info('Initialized cdw_ace23_buddies.json with an empty array.');
+    logger.info(BUDDY_PROJECT_CONSTANTS.LOGGER_MESSAGE.INITIALIZED_ARRAY);
 }
 
 // Routes
@@ -37,5 +38,5 @@ app.use('/api/buddies', buddyRoutes);
 
 // Start Server
 app.listen(PORT, () => {
-    logger.info(`Server is running on http://localhost:${PORT}`);
+    logger.info(`${BUDDY_PROJECT_CONSTANTS.LOGGER_MESSAGE.SERVER_RUNNING_ON}${PORT}`);
 });

@@ -9,6 +9,10 @@ const BUDDY_PROJECT_CONSTANTS = {
         ADDED_BUDDY: 'Buddy added successfully',
         UPDATED_BUDDY: 'Buddy updated successfully',
         DELETED_BUDDY:  'Buddy deleted successfully',
+    },
+    LOGGER_MESSAGE: {
+        INITIALIZED_ARRAY: 'Initialized cdw_ace23_buddies.json with an empty array.',
+        SERVER_RUNNING_ON: 'Server is running on http://localhost:'
     }
 }
 
